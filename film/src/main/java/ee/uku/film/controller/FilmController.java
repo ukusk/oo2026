@@ -15,21 +15,23 @@ public class FilmController {
         this.filmRepository = filmRepository;
     }
 
-    // GET
+    // get
     @GetMapping("/films")
     public List<Film> getFilms() {
         return filmRepository.findAll();
     }
 
-    // POST
+    // post
     @PostMapping("/films")
-    public Film addFilm(@RequestBody Film film) {
-        return filmRepository.save(film);
+    public List<Film> addFilm(@RequestBody Film film) {
+        filmRepository.save(film);
+        return filmRepository.findAll();
     }
 
-    // DELETE id-ga
+    // delete id-ga
     @DeleteMapping("/films/{id}")
-    public void deleteFilm(@PathVariable Long id) {
+    public List<Film> deleteFilm(@PathVariable Long id) {
         filmRepository.deleteById(id);
+        return filmRepository.findAll();
     }
 }
