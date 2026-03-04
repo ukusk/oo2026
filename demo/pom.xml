@@ -77,6 +77,11 @@
 			<artifactId>spring-boot-starter-webmvc-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.github.vladislavlag</groupId>
+			<artifactId>estonian-personal-code-validator</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -107,5 +112,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

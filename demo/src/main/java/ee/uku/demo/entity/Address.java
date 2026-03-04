@@ -14,11 +14,13 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Category {
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-
-
+    private String street;
+    private String number;
+    private String city;
+    private String country;
+    private String zipcode;
 }
