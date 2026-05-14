@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Decathlon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Kümnevõistlus</h1>
+
+<div class="box">
+    <h2>Lisa sportlane</h2>
+
+    <input type="text" id="nimi" placeholder="Sportlase nimi">
+
+    <button onclick="lisaSportlane()">
+        Lisa
+    </button>
+</div>
+
+
+<div class="box">
+    <h2>Lisa tulemus</h2>
+
+    <input type="number"
+           id="sportlaneId"
+           placeholder="Sportlase ID">
+
+    <input type="text"
+           id="ala"
+           placeholder="Ala">
+
+    <input type="number"
+           id="punktid"
+           placeholder="Punktid">
+
+    <button onclick="lisaTulemus()">
+        Lisa tulemus
+    </button>
+</div>
+
+
+<div class="box">
+    <h2>Kogusumma</h2>
+
+    <input type="number"
+           id="summaId"
+           placeholder="Sportlase ID">
+
+    <button onclick="vaataKogusumma()">
+        Vaata summat
+    </button>
+
+    <p id="kogusumma"></p>
+</div>
+
+
+<div class="box">
+    <h2>Sportlased</h2>
+
+    <button onclick="laeSportlased()">
+        Lae sportlased
+    </button>
+
+    <ul id="sportlased"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
