@@ -1,5 +1,6 @@
 package ee.decathlon_kurm.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,7 @@ public class Tulemus {
     private String ala;     // nt 100m, kaugushüpe jne
     private int punktid;    // punktid selle ala eest
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "sportlane_id")
     private Sportlane sportlane;
